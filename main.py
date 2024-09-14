@@ -33,7 +33,7 @@ artist_id = searching_artists[choice_artist - 1]["id"]
 artist_name = searching_artists[choice_artist - 1]["name"]
 
 res = requests.get(
-    f"https://musicbrainz.org/ws/2/recording?artist={artist_id}&inc=artist-credits&limit=100&fmt=json",
+    f"https://musicbrainz.org/ws/2/recording?artist={artist_id}&inc=artist-credits&limit=300&fmt=json",
     headers=headers,
 )
 
