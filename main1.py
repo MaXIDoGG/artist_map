@@ -1,7 +1,8 @@
-from yandex_music import Client
+from yandex_music import Client, Artist
 import networkx as nx
 import matplotlib.pyplot as plt
 import re
+from collections import deque
 
 client = Client().init()
 
@@ -15,16 +16,20 @@ last_search_result = client.search(last_artist_name)
 
 first_artist = first_search_result.artists.results[0]
 last_artist = last_search_result.artists.results[0]
-visited_artists = [first_artist.name]
 
-# Очередь для обхода артистов
-queue = [first_artist]
+# Используем множество для посетившихся артистов
+visited_artists = {first_artist.name}
+
+# Используем deque для очереди (быстрее чем список)
+queue = deque([first_artist])
+
+# Лимит на количество артистов и глубину поиска
+max_artists = 1200
+max_depth = 7
+depth = {first_artist.name: 0}
 
 # Флаг для остановки поиска
 flag = False
-
-# Лимит на количество артистов
-max_artists = 500
 
 
 def clean_name(name: str) -> str:
@@ -34,10 +39,15 @@ def clean_name(name: str) -> str:
 
 # Основной цикл поиска
 while queue and len(visited_artists) < max_artists and not flag:
-    current_artist = queue.pop(0)
+    current_artist = queue.popleft()
     current_artist_name = clean_name(current_artist.name)
 
-    for track in current_artist.getTracks(page_size=150).tracks:
+    # Если глубина поиска превышает максимальное значение, выходим
+    if depth[current_artist_name] >= max_depth:
+        continue
+
+    # Получаем треки текущего артиста
+    for track in current_artist.getTracks(page_size=70).tracks:
         if flag:
             break
 
@@ -48,14 +58,20 @@ while queue and len(visited_artists) < max_artists and not flag:
 
         for artist in artists:
             artist_name = clean_name(artist.name)
-            if artist_name not in visited_artists:
-                G.add_node(artist_name)
-                visited_artists.append(artist_name)
-                queue.append(artist)
 
+            if artist_name not in visited_artists:
+                visited_artists.add(artist_name)
+                queue.append(artist)
+                G.add_node(artist_name)
+
+                # Обновляем глубину поиска для нового артиста
+                depth[artist_name] = depth[current_artist_name] + 1
+
+            # Добавляем ребро между текущим и новым артистом
             if artist_name != current_artist_name:
                 G.add_edge(current_artist_name, artist_name)
 
+            # Если нашли целевого артиста, выводим кратчайший путь
             if artist_name == last_artist.name:
                 print(
                     "Кратчайший путь:",
