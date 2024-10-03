@@ -27,8 +27,6 @@ while queue and len(visited_artists) < 1000 and not flag:
     for track in current_artist.getTracks(page_size=200).tracks:
         if flag:
             break
-        # print(track.title)
-        # print(track.artists_name())
         artists = track.artists
         if len(artists) < 2:
             continue
