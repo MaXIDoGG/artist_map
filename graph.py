@@ -20,7 +20,7 @@ class YandexMusicGraph:
             print(subgraph)
             result_graph = nx.compose(result_graph, subgraph)
             print(result_graph)
-        return self.graph_to_json(result_graph)
+        return {"graph": self.graph_to_json(result_graph), "path": path}
 
     def graph_to_json(self, graph):
         graph_data = json_graph.node_link_data(graph)

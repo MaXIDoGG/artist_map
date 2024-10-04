@@ -26,67 +26,67 @@
 
     <script>
         document
-    .getElementById("searchForm")
-    .addEventListener("submit", async function (event) {
-        event.preventDefault();
+        .getElementById("searchForm")
+        .addEventListener("submit", async function (event) {
+            event.preventDefault();
 
-        // Получаем значения артистов из формы
-        const artist1 = document.getElementById("artist1").value;
-        const artist2 = document.getElementById("artist2").value;
+            // Получаем значения артистов из формы
+            const artist1 = document.getElementById("artist1").value;
+            const artist2 = document.getElementById("artist2").value;
 
-        // Отправляем запрос к API
-        try {
-            const response = await fetch(
-                `/search_path/?artist_1=${encodeURIComponent(artist1)}&artist_2=${encodeURIComponent(artist2)}`
-            );
-            const data = await response.json();
+            // Отправляем запрос к API
+            try {
+                const response = await fetch(
+                    `/search_path/?artist_1=${encodeURIComponent(artist1)}&artist_2=${encodeURIComponent(artist2)}`
+                );
+                const data = await response.json();
+                alert(data["path"])
+                // Передаем данные в функцию для построения графа
+                drawGraph(data["graph"]);
+            } catch (error) {
+                console.error("Error fetching graph data:", error);
+            }
+        });
 
-            // Передаем данные в функцию для построения графа
-            drawGraph(data);
-        } catch (error) {
-            console.error("Error fetching graph data:", error);
-        }
-    });
+    function drawGraph(graphData) {
+        // Очищаем контейнер перед созданием нового графа
+        const container = document.getElementById("graphContainer");
+        container.innerHTML = "";
 
-function drawGraph(graphData) {
-    // Очищаем контейнер перед созданием нового графа
-    const container = document.getElementById("graphContainer");
-    container.innerHTML = "";
+        // Используем библиотеку vis.js для отображения графа
+        const nodes = new vis.DataSet(graphData.nodes.map(node => ({
+            id: node.id,
+            label: node.id
+        })));
+        const edges = new vis.DataSet(graphData.links.map(link => ({
+            from: link.source,
+            to: link.target
+        })));
 
-    // Используем библиотеку vis.js для отображения графа
-    const nodes = new vis.DataSet(graphData.nodes.map(node => ({
-        id: node.id,
-        label: node.id
-    })));
-    const edges = new vis.DataSet(graphData.links.map(link => ({
-        from: link.source,
-        to: link.target
-    })));
+        const data = {
+            nodes: nodes,
+            edges: edges,
+        };
 
-    const data = {
-        nodes: nodes,
-        edges: edges,
-    };
-
-    const options = {
-        interaction: {
-            zoomView: true,
-            dragView: true,
-        },
-        edges: {
-            smooth: true,
-        },
-        nodes: {
-            shape: "circle",
-            size: 20,
-            font: {
-                size: 16,
+        const options = {
+            interaction: {
+                zoomView: true,
+                dragView: true,
             },
-        },
-    };
+            edges: {
+                smooth: true,
+            },
+            nodes: {
+                shape: "circle",
+                size: 20,
+                font: {
+                    size: 16,
+                },
+            },
+        };
 
-    const network = new vis.Network(container, data, options);
-}
+        const network = new vis.Network(container, data, options);
+    }
 
     </script>
 </body>
