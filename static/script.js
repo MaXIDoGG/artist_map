@@ -10,9 +10,7 @@ document
     // Отправляем запрос к API
     try {
       const response = await fetch(
-        `/search_path/?artist_1=${encodeURIComponent(
-          artist1
-        )}&artist_2=${encodeURIComponent(artist2)}`
+        `/search_path/?artist_1=${encodeURIComponent(artist1)}&artist_2=${encodeURIComponent(artist2)}`
       );
       const data = await response.json();
 

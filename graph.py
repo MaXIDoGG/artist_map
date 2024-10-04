@@ -12,6 +12,13 @@ class YandexMusicGraph:
         self.g: nx.Graph = nx.read_graphml(graph_file_name)
         self.client = Client().init()
 
+    def search_artist(self, query_artist: str):
+        artists = self.client.search(query_artist).artists.results
+        print(artists)
+        artist_names = list(map(lambda a: a.name, artists))
+        print(artist_names)
+        return artist_names
+
     def search_collaborations(self, artist_1, artist_2):
         result_graph = nx.Graph()
         path = nx.shortest_path(self.g, artist_1, artist_2)

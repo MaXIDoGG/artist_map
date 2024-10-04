@@ -18,6 +18,11 @@ async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
+@app.get("/search_artist")
+async def search_artist(artist: str):
+    return graph.search_artist(artist)
+
+
 @app.get("/search_path/")
 async def search_path(artist_1: str, artist_2: str):
     print(f"Artist 1: {artist_1}, Artist 2: {artist_2}")
