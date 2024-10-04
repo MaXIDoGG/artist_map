@@ -1,20 +1,29 @@
 from graph import YandexMusicGraph
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+
 import uvicorn
-from urllib.parse import quote_plus
 
 app = FastAPI()
+templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 graph = YandexMusicGraph()
 
 
 @app.get("/")
-async def home():
-    return {"Hello": "World"}
+async def home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.get("/search_path/")
 async def search_path(artist_1: str, artist_2: str):
-    return graph.search_collaborations(quote_plus(artist_1), quote_plus(artist_2))
+    print(f"Artist 1: {artist_1}, Artist 2: {artist_2}")
+    result = graph.search_collaborations(artist_1, artist_2)
+    print(result)
+    return result
 
 
 if __name__ == "__main__":
