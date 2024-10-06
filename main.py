@@ -31,5 +31,8 @@ async def search_path(artist_1: str, artist_2: str):
     return result
 
 
+print("Hello world!")
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=5000, log_level="info")
