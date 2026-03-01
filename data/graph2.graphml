@@ -1,0 +1,582 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="Markul" />
+    <node id="Oxxxymiron" />
+    <node id="Би-2" />
+    <node id="ЛСП" />
+    <node id="1.Kla$" />
+    <node id="EIGHTEEN" />
+    <node id="domiNo" />
+    <node id="Thomas Mraz" />
+    <node id="Брутто" />
+    <node id="SCHOKK" />
+    <node id="PORCHY" />
+    <node id="IDAN" />
+    <node id="Жак Энтони" />
+    <node id="Aarne" />
+    <node id="Toxi$" />
+    <node id="NIKER" />
+    <node id="Тося Чайкина" />
+    <node id="FRIENDLY THUG 52 NGG" />
+    <node id="OBLADAET" />
+    <node id="Джарахов" />
+    <node id="J. ROUH" />
+    <node id="ALBLAK 52" />
+    <node id="BUSHIDO ZHO" />
+    <node id="Dyce" />
+    <node id="MAYOT" />
+    <node id="ANIKV" />
+    <node id="LIL KRYSTALLL" />
+    <node id="Лоя" />
+    <node id="T-Fest" />
+    <node id="SALUKI" />
+    <node id="The Limba" />
+    <node id="FEDUK" />
+    <node id="Платина" />
+    <node id="БИЛИК" />
+    <node id="OG Buda" />
+    <node id="Yanix" />
+    <node id="КУОК" />
+    <node id="D.Loyal" />
+    <node id="Roman Troy" />
+    <node id="Mc No Limit" />
+    <node id="Loqiemean" />
+    <node id="SlippahNeSpi" />
+    <node id="NDS Flava" />
+    <node id="HASH TAG" />
+    <node id="Хайд" />
+    <node id="Сергей Воронов" />
+    <node id="Тина" />
+    <node id="Лиза Громова" />
+    <node id="Сплин" />
+    <node id="Марія Чайковська" />
+    <node id="BrainStorm" />
+    <node id="XXX $ Горы" />
+    <node id="Тамара Гвердцители" />
+    <node id="Варя Демидова" />
+    <node id="Чичерина" />
+    <node id="Диана Арбенина" />
+    <node id="Найк Борзов" />
+    <node id="Musia Totibadze" />
+    <node id="Настя Полева" />
+    <node id="Владимир Шахрин" />
+    <node id="Куртки Кобейна" />
+    <node id="PHARAOH" />
+    <node id="YUNG TRAPPA" />
+    <node id="GONE.Fludd" />
+    <node id="Моя Мишель" />
+    <node id="Грязь" />
+    <node id="Молодой Платон" />
+    <node id="СД" />
+    <node id="BOOKER" />
+    <node id="Вири Альди" />
+    <node id="25/17" />
+    <node id="Dose" />
+    <node id="SQWOZ BAB" />
+    <node id="galat" />
+    <node id="Дора" />
+    <node id="MORGENSHTERN" />
+    <node id="Mirèle" />
+    <node id="Verobeatz" />
+    <node id="макулатура" />
+    <node id="Мэйби Бэйби" />
+    <node id="SLAVA MARLOW" />
+    <node id="uniqe" />
+    <node id="nkeeei" />
+    <node id="ARTEM SHILOVETS" />
+    <node id="Czar" />
+    <node id="Цинк Уродов" />
+    <node id="kraenkova" />
+    <node id="Silver Ace" />
+    <node id="КМС" />
+    <node id="Number Ron" />
+    <node id="Rud1k" />
+    <node id="I.G.O.R" />
+    <node id="K.R.A." />
+    <node id="Atures" />
+    <node id="D-Vers" />
+    <node id="Dandy" />
+    <node id="Blaiz" />
+    <node id="N.G." />
+    <node id="Maxat" />
+    <node id="Элджей" />
+    <node id="SENSEE" />
+    <node id="Pinup Girl" />
+    <node id="Loc-Dog" />
+    <node id="Мэйти" />
+    <node id="Kurbat" />
+    <node id="DOPECLVB" />
+    <node id="JEEMBO" />
+    <node id="Basic Boy" />
+    <node id="Boulevard Depo" />
+    <node id="Baby19!" />
+    <node id="I61" />
+    <node id="Glebasta Spal" />
+    <node id="KKOME" />
+    <node id="Wipo" />
+    <node id="The Ghosts" />
+    <node id="STRANIZA" />
+    <node id="ЛАУД" />
+    <node id="CREAM SODA" />
+    <node id="YUNGWAY" />
+    <node id="PINQ" />
+    <node id="SP4K" />
+    <node id="2night" />
+    <node id="SOULOUD" />
+    <node id="RAIJIN" />
+    <node id="Oushenti" />
+    <node id="CAKEBOY" />
+    <node id="КлоуКома" />
+    <node id="OBRAZKOBRA" />
+    <node id="Gucci Ninja" />
+    <node id="Joseph" />
+    <node id="Эрика Лундмоен" />
+    <node id="THRILL PILL" />
+    <node id="Наадя" />
+    <node id="Фреска" />
+    <node id="Oligarkh" />
+    <node id="ray!" />
+    <node id="Pompeya" />
+    <node id="blago white" />
+    <node id="Антоха МС" />
+    <node id="the Nia" />
+    <node id="MUSUME" />
+    <node id="White Punk" />
+    <node id="HOFMANNITA" />
+    <node id="MACAN" />
+    <node id="Рыночные Отношения" />
+    <node id="Смоки Мо" />
+    <node id="ICEGERGERT" />
+    <node id="Ноггано" />
+    <node id="Три дня дождя" />
+    <node id="SLIMUS" />
+    <node id="Бэнг" />
+    <node id="SERYABKINA" />
+    <node id="Metox" />
+    <node id="Карась К.М.С." />
+    <node id="VibeTGK" />
+    <node id="Крип-А-Крип" />
+    <node id="Brick Bazuka" />
+    <node id="Джи Вилкс" />
+    <node id="N1NT3ND0" />
+    <node id="NILETTO" />
+    <node id="VELIAL SQUAD" />
+    <node id="Meep" />
+    <node id="Каста" />
+    <node id="Иван Дорн" />
+    <node id="BITTUEV" />
+    <node id="Заточка" />
+    <node id="Isupov" />
+    <node id="Leshaprio" />
+    <node id="SODA LUV" />
+    <node id="BALLER" />
+    <node id="L iZReaL" />
+    <node id="The Chemodan" />
+    <node id="HORUS" />
+    <node id="Чёрная экономика" />
+    <node id="Адвайта" />
+    <node id="Гуляй Рванина" />
+    <node id="FD Vadim" />
+    <node id="Leon Libre" />
+    <node id="Adamant" />
+    <node id="Аким Апачев" />
+    <node id="Петар Мартич" />
+    <node id="JOLLO" />
+    <node id="Шура Кузнецова" />
+    <node id="Gera Berlin" />
+    <node id="D.1.S" />
+    <node id="Say Mur" />
+    <node id="Bogdan Kiyashko" />
+    <node id="BES" />
+    <node id="Elias Fogg" />
+    <node id="Слава КПСС" />
+    <node id="Мосты" />
+    <node id="4atty aka Tilla" />
+    <node id="Monobeatsyxa" />
+    <node id="Dr. Up" />
+    <node id="Sirius" />
+    <node id="appledream" />
+    <node id="She-Raw" />
+    <node id="ATL" />
+    <node id="Ameriqa" />
+    <node id="Cianna Blaze" />
+    <node id="Dizaster" />
+    <node id="Bumble Beezy" />
+    <node id="Охра" />
+    <node id="CVPELLV" />
+    <node id="PLC" />
+    <node id="WELVTH" />
+    <node id="WEVLTH" />
+    <node id="BIYA" />
+    <node id="Damien" />
+    <node id="Ка тет" />
+    <node id="WUZET" />
+    <node id="Sacha Claxton" />
+    <node id="Zeph Ellis" />
+    <node id="British Rich" />
+    <node id="Komet" />
+    <node id="O.T" />
+    <node id="Komo Beatz" />
+    <node id="OT BEATZ" />
+    <node id="Claude Money" />
+    <node id="Bispo" />
+    <node id="Jerome Da Chef" />
+    <node id="DOPEXBROKE" />
+    <node id="Popek" />
+    <node id="Matheo" />
+    <node id="Jack Marzilla" />
+    <node id="Claudio Marques" />
+    <node id="Booda French" />
+    <node id="Nee-Hi" />
+    <node id="Borixon" />
+    <node id="Zabol" />
+    <node id="Merky Ace" />
+    <node id="TKO FT" />
+    <node id="Ego" />
+    <node id="Nizoł" />
+    <node id="Kaen" />
+    <node id="Olsen" />
+    <node id="Youngbez" />
+    <node id="Zuz Rock" />
+    <node id="J Grande" />
+    <node id="noa" />
+    <node id="ARS-N" />
+    <node id="yngluv" />
+    <node id="Артём Качер" />
+    <node id="ТАТАРИН" />
+    <node id="Rendow" />
+    <node id="Джиган" />
+    <node id="ANDRO" />
+    <node id="Qontrast" />
+    <node id="SEEMEE" />
+    <node id="НЕДРЫ" />
+    <node id="ARSUL" />
+    <node id="eroiera" />
+    <node id="MARCO-9" />
+    <node id="Plinofficial" />
+    <node id="Apashe" />
+    <node id="VITO" />
+    <node id="Dj Bad Yapi" />
+    <node id="Gee Baller" />
+    <node id="Konfuz" />
+    <node id="ABBBOSE" />
+    <node id="NWR" />
+    <node id="Чаян Фамали" />
+    <node id="Эсчевский" />
+    <node id="Gangsburg" />
+    <node id="KERTIEV" />
+    <node id="Николай Римский-Корсаков" />
+    <node id="Murovei" />
+    <node id="Кирилл Мойтон" />
+    <node id="Птаха" />
+    <edge source="Markul" target="Oxxxymiron" />
+    <edge source="Markul" target="Aarne" />
+    <edge source="Markul" target="Toxi$" />
+    <edge source="Markul" target="NIKER" />
+    <edge source="Markul" target="Тося Чайкина" />
+    <edge source="Markul" target="FRIENDLY THUG 52 NGG" />
+    <edge source="Markul" target="OBLADAET" />
+    <edge source="Markul" target="Джарахов" />
+    <edge source="Markul" target="J. ROUH" />
+    <edge source="Markul" target="ALBLAK 52" />
+    <edge source="Markul" target="BUSHIDO ZHO" />
+    <edge source="Markul" target="Dyce" />
+    <edge source="Markul" target="MAYOT" />
+    <edge source="Markul" target="ANIKV" />
+    <edge source="Markul" target="LIL KRYSTALLL" />
+    <edge source="Markul" target="Лоя" />
+    <edge source="Markul" target="T-Fest" />
+    <edge source="Markul" target="ЛСП" />
+    <edge source="Markul" target="SALUKI" />
+    <edge source="Markul" target="The Limba" />
+    <edge source="Markul" target="FEDUK" />
+    <edge source="Markul" target="Thomas Mraz" />
+    <edge source="Markul" target="Платина" />
+    <edge source="Markul" target="БИЛИК" />
+    <edge source="Markul" target="OG Buda" />
+    <edge source="Markul" target="Yanix" />
+    <edge source="Markul" target="КУОК" />
+    <edge source="Markul" target="PORCHY" />
+    <edge source="Markul" target="IDAN" />
+    <edge source="Markul" target="D.Loyal" />
+    <edge source="Markul" target="Roman Troy" />
+    <edge source="Markul" target="Mc No Limit" />
+    <edge source="Markul" target="Loqiemean" />
+    <edge source="Markul" target="SlippahNeSpi" />
+    <edge source="Markul" target="NDS Flava" />
+    <edge source="Markul" target="HASH TAG" />
+    <edge source="Markul" target="Хайд" />
+    <edge source="Oxxxymiron" target="Би-2" />
+    <edge source="Oxxxymiron" target="ЛСП" />
+    <edge source="Oxxxymiron" target="1.Kla$" />
+    <edge source="Oxxxymiron" target="EIGHTEEN" />
+    <edge source="Oxxxymiron" target="domiNo" />
+    <edge source="Oxxxymiron" target="Thomas Mraz" />
+    <edge source="Oxxxymiron" target="Брутто" />
+    <edge source="Oxxxymiron" target="SCHOKK" />
+    <edge source="Oxxxymiron" target="PORCHY" />
+    <edge source="Oxxxymiron" target="IDAN" />
+    <edge source="Oxxxymiron" target="Жак Энтони" />
+    <edge source="Би-2" target="Сергей Воронов" />
+    <edge source="Би-2" target="Тина" />
+    <edge source="Би-2" target="Лиза Громова" />
+    <edge source="Би-2" target="Сплин" />
+    <edge source="Би-2" target="Марія Чайковська" />
+    <edge source="Би-2" target="BrainStorm" />
+    <edge source="Би-2" target="XXX $ Горы" />
+    <edge source="Би-2" target="Тамара Гвердцители" />
+    <edge source="Би-2" target="Варя Демидова" />
+    <edge source="Би-2" target="Чичерина" />
+    <edge source="Би-2" target="Диана Арбенина" />
+    <edge source="Би-2" target="Найк Борзов" />
+    <edge source="Би-2" target="Musia Totibadze" />
+    <edge source="Би-2" target="Настя Полева" />
+    <edge source="Би-2" target="Владимир Шахрин" />
+    <edge source="Би-2" target="Куртки Кобейна" />
+    <edge source="ЛСП" target="PHARAOH" />
+    <edge source="ЛСП" target="YUNG TRAPPA" />
+    <edge source="ЛСП" target="GONE.Fludd" />
+    <edge source="ЛСП" target="Моя Мишель" />
+    <edge source="ЛСП" target="Грязь" />
+    <edge source="ЛСП" target="Молодой Платон" />
+    <edge source="ЛСП" target="СД" />
+    <edge source="ЛСП" target="BOOKER" />
+    <edge source="ЛСП" target="Вири Альди" />
+    <edge source="ЛСП" target="25/17" />
+    <edge source="ЛСП" target="Dose" />
+    <edge source="ЛСП" target="SQWOZ BAB" />
+    <edge source="ЛСП" target="galat" />
+    <edge source="ЛСП" target="Дора" />
+    <edge source="ЛСП" target="SALUKI" />
+    <edge source="ЛСП" target="MORGENSHTERN" />
+    <edge source="ЛСП" target="Mirèle" />
+    <edge source="ЛСП" target="Verobeatz" />
+    <edge source="ЛСП" target="макулатура" />
+    <edge source="ЛСП" target="Мэйби Бэйби" />
+    <edge source="ЛСП" target="SLAVA MARLOW" />
+    <edge source="ЛСП" target="uniqe" />
+    <edge source="ЛСП" target="nkeeei" />
+    <edge source="ЛСП" target="ARTEM SHILOVETS" />
+    <edge source="ЛСП" target="Thomas Mraz" />
+    <edge source="ЛСП" target="PORCHY" />
+    <edge source="1.Kla$" target="Czar" />
+    <edge source="1.Kla$" target="Цинк Уродов" />
+    <edge source="1.Kla$" target="kraenkova" />
+    <edge source="1.Kla$" target="Silver Ace" />
+    <edge source="1.Kla$" target="КМС" />
+    <edge source="1.Kla$" target="SCHOKK" />
+    <edge source="1.Kla$" target="Number Ron" />
+    <edge source="1.Kla$" target="Rud1k" />
+    <edge source="1.Kla$" target="I.G.O.R" />
+    <edge source="1.Kla$" target="K.R.A." />
+    <edge source="1.Kla$" target="Atures" />
+    <edge source="1.Kla$" target="D-Vers" />
+    <edge source="1.Kla$" target="Dandy" />
+    <edge source="1.Kla$" target="Blaiz" />
+    <edge source="1.Kla$" target="N.G." />
+    <edge source="1.Kla$" target="Maxat" />
+    <edge source="EIGHTEEN" target="Элджей" />
+    <edge source="EIGHTEEN" target="SENSEE" />
+    <edge source="domiNo" target="Pinup Girl" />
+    <edge source="domiNo" target="Loc-Dog" />
+    <edge source="domiNo" target="Мэйти" />
+    <edge source="domiNo" target="Kurbat" />
+    <edge source="Thomas Mraz" target="Yanix" />
+    <edge source="Thomas Mraz" target="DOPECLVB" />
+    <edge source="Thomas Mraz" target="JEEMBO" />
+    <edge source="Thomas Mraz" target="Basic Boy" />
+    <edge source="Thomas Mraz" target="Boulevard Depo" />
+    <edge source="Thomas Mraz" target="PHARAOH" />
+    <edge source="Thomas Mraz" target="Baby19!" />
+    <edge source="Thomas Mraz" target="YUNG TRAPPA" />
+    <edge source="Thomas Mraz" target="I61" />
+    <edge source="Thomas Mraz" target="Glebasta Spal" />
+    <edge source="Thomas Mraz" target="GONE.Fludd" />
+    <edge source="Thomas Mraz" target="KKOME" />
+    <edge source="Thomas Mraz" target="Loqiemean" />
+    <edge source="Thomas Mraz" target="BOOKER" />
+    <edge source="Thomas Mraz" target="Wipo" />
+    <edge source="Thomas Mraz" target="The Ghosts" />
+    <edge source="Thomas Mraz" target="STRANIZA" />
+    <edge source="Thomas Mraz" target="ЛАУД" />
+    <edge source="Thomas Mraz" target="CREAM SODA" />
+    <edge source="Thomas Mraz" target="YUNGWAY" />
+    <edge source="Thomas Mraz" target="MAYOT" />
+    <edge source="Thomas Mraz" target="PINQ" />
+    <edge source="Thomas Mraz" target="SP4K" />
+    <edge source="Thomas Mraz" target="2night" />
+    <edge source="Thomas Mraz" target="SOULOUD" />
+    <edge source="Thomas Mraz" target="RAIJIN" />
+    <edge source="Thomas Mraz" target="Oushenti" />
+    <edge source="Thomas Mraz" target="CAKEBOY" />
+    <edge source="Thomas Mraz" target="КлоуКома" />
+    <edge source="Thomas Mraz" target="OBRAZKOBRA" />
+    <edge source="Thomas Mraz" target="Gucci Ninja" />
+    <edge source="Thomas Mraz" target="Joseph" />
+    <edge source="Thomas Mraz" target="Эрика Лундмоен" />
+    <edge source="Thomas Mraz" target="THRILL PILL" />
+    <edge source="Thomas Mraz" target="Наадя" />
+    <edge source="Thomas Mraz" target="Фреска" />
+    <edge source="Thomas Mraz" target="Oligarkh" />
+    <edge source="Thomas Mraz" target="ray!" />
+    <edge source="Thomas Mraz" target="Pompeya" />
+    <edge source="Thomas Mraz" target="blago white" />
+    <edge source="Thomas Mraz" target="Антоха МС" />
+    <edge source="Thomas Mraz" target="the Nia" />
+    <edge source="Thomas Mraz" target="MUSUME" />
+    <edge source="Thomas Mraz" target="OBLADAET" />
+    <edge source="Thomas Mraz" target="White Punk" />
+    <edge source="Thomas Mraz" target="HOFMANNITA" />
+    <edge source="Брутто" target="MACAN" />
+    <edge source="Брутто" target="Рыночные Отношения" />
+    <edge source="Брутто" target="Смоки Мо" />
+    <edge source="Брутто" target="ICEGERGERT" />
+    <edge source="Брутто" target="Ноггано" />
+    <edge source="Брутто" target="Три дня дождя" />
+    <edge source="Брутто" target="SLIMUS" />
+    <edge source="Брутто" target="Бэнг" />
+    <edge source="Брутто" target="SERYABKINA" />
+    <edge source="Брутто" target="Loc-Dog" />
+    <edge source="Брутто" target="Metox" />
+    <edge source="Брутто" target="Карась К.М.С." />
+    <edge source="Брутто" target="SALUKI" />
+    <edge source="Брутто" target="БИЛИК" />
+    <edge source="Брутто" target="VibeTGK" />
+    <edge source="Брутто" target="Крип-А-Крип" />
+    <edge source="Брутто" target="Brick Bazuka" />
+    <edge source="Брутто" target="Джи Вилкс" />
+    <edge source="Брутто" target="N1NT3ND0" />
+    <edge source="Брутто" target="NILETTO" />
+    <edge source="Брутто" target="VELIAL SQUAD" />
+    <edge source="Брутто" target="Meep" />
+    <edge source="Брутто" target="Каста" />
+    <edge source="Брутто" target="Иван Дорн" />
+    <edge source="Брутто" target="BITTUEV" />
+    <edge source="Брутто" target="OG Buda" />
+    <edge source="Брутто" target="Заточка" />
+    <edge source="Брутто" target="Isupov" />
+    <edge source="Брутто" target="Leshaprio" />
+    <edge source="Брутто" target="SODA LUV" />
+    <edge source="Брутто" target="BALLER" />
+    <edge source="Брутто" target="Yanix" />
+    <edge source="Брутто" target="L iZReaL" />
+    <edge source="Брутто" target="The Chemodan" />
+    <edge source="Брутто" target="HORUS" />
+    <edge source="Брутто" target="Чёрная экономика" />
+    <edge source="Брутто" target="Адвайта" />
+    <edge source="Брутто" target="Гуляй Рванина" />
+    <edge source="Брутто" target="Жак Энтони" />
+    <edge source="Брутто" target="FD Vadim" />
+    <edge source="SCHOKK" target="Czar" />
+    <edge source="SCHOKK" target="СД" />
+    <edge source="SCHOKK" target="K.R.A." />
+    <edge source="SCHOKK" target="Leon Libre" />
+    <edge source="SCHOKK" target="Adamant" />
+    <edge source="SCHOKK" target="I.G.O.R" />
+    <edge source="SCHOKK" target="Аким Апачев" />
+    <edge source="SCHOKK" target="Петар Мартич" />
+    <edge source="SCHOKK" target="JOLLO" />
+    <edge source="SCHOKK" target="Шура Кузнецова" />
+    <edge source="SCHOKK" target="Gera Berlin" />
+    <edge source="SCHOKK" target="D.1.S" />
+    <edge source="SCHOKK" target="Say Mur" />
+    <edge source="SCHOKK" target="Bogdan Kiyashko" />
+    <edge source="SCHOKK" target="BES" />
+    <edge source="SCHOKK" target="Elias Fogg" />
+    <edge source="SCHOKK" target="Слава КПСС" />
+    <edge source="SCHOKK" target="Blaiz" />
+    <edge source="SCHOKK" target="Мосты" />
+    <edge source="SCHOKK" target="4atty aka Tilla" />
+    <edge source="SCHOKK" target="Monobeatsyxa" />
+    <edge source="SCHOKK" target="Dr. Up" />
+    <edge source="SCHOKK" target="Sirius" />
+    <edge source="SCHOKK" target="appledream" />
+    <edge source="SCHOKK" target="Maxat" />
+    <edge source="SCHOKK" target="SLIMUS" />
+    <edge source="SCHOKK" target="She-Raw" />
+    <edge source="PORCHY" target="IDAN" />
+    <edge source="PORCHY" target="Loqiemean" />
+    <edge source="PORCHY" target="ATL" />
+    <edge source="PORCHY" target="Ameriqa" />
+    <edge source="PORCHY" target="Cianna Blaze" />
+    <edge source="PORCHY" target="Жак Энтони" />
+    <edge source="PORCHY" target="Dizaster" />
+    <edge source="PORCHY" target="Bumble Beezy" />
+    <edge source="PORCHY" target="Охра" />
+    <edge source="PORCHY" target="CVPELLV" />
+    <edge source="PORCHY" target="PLC" />
+    <edge source="PORCHY" target="WELVTH" />
+    <edge source="PORCHY" target="WEVLTH" />
+    <edge source="PORCHY" target="BIYA" />
+    <edge source="PORCHY" target="Damien" />
+    <edge source="PORCHY" target="Ка тет" />
+    <edge source="PORCHY" target="WUZET" />
+    <edge source="PORCHY" target="Sacha Claxton" />
+    <edge source="PORCHY" target="Zeph Ellis" />
+    <edge source="PORCHY" target="British Rich" />
+    <edge source="PORCHY" target="Komet" />
+    <edge source="PORCHY" target="O.T" />
+    <edge source="PORCHY" target="Komo Beatz" />
+    <edge source="PORCHY" target="OT BEATZ" />
+    <edge source="PORCHY" target="Claude Money" />
+    <edge source="PORCHY" target="Bispo" />
+    <edge source="PORCHY" target="Jerome Da Chef" />
+    <edge source="PORCHY" target="DOPEXBROKE" />
+    <edge source="PORCHY" target="Popek" />
+    <edge source="PORCHY" target="Matheo" />
+    <edge source="PORCHY" target="Jack Marzilla" />
+    <edge source="PORCHY" target="Claudio Marques" />
+    <edge source="PORCHY" target="Booda French" />
+    <edge source="PORCHY" target="Nee-Hi" />
+    <edge source="PORCHY" target="Borixon" />
+    <edge source="PORCHY" target="Zabol" />
+    <edge source="PORCHY" target="Merky Ace" />
+    <edge source="PORCHY" target="TKO FT" />
+    <edge source="PORCHY" target="Ego" />
+    <edge source="PORCHY" target="Nizoł" />
+    <edge source="PORCHY" target="Kaen" />
+    <edge source="PORCHY" target="Olsen" />
+    <edge source="PORCHY" target="Youngbez" />
+    <edge source="PORCHY" target="Zuz Rock" />
+    <edge source="PORCHY" target="J Grande" />
+    <edge source="IDAN" target="КУОК" />
+    <edge source="IDAN" target="D.Loyal" />
+    <edge source="IDAN" target="Roman Troy" />
+    <edge source="IDAN" target="Mc No Limit" />
+    <edge source="IDAN" target="noa" />
+    <edge source="Жак Энтони" target="Yanix" />
+    <edge source="Жак Энтони" target="ARS-N" />
+    <edge source="Жак Энтони" target="yngluv" />
+    <edge source="Жак Энтони" target="Артём Качер" />
+    <edge source="Жак Энтони" target="ТАТАРИН" />
+    <edge source="Жак Энтони" target="Rendow" />
+    <edge source="Жак Энтони" target="Джиган" />
+    <edge source="Жак Энтони" target="ANDRO" />
+    <edge source="Жак Энтони" target="Qontrast" />
+    <edge source="Жак Энтони" target="SEEMEE" />
+    <edge source="Жак Энтони" target="НЕДРЫ" />
+    <edge source="Жак Энтони" target="ARSUL" />
+    <edge source="Жак Энтони" target="eroiera" />
+    <edge source="Жак Энтони" target="MARCO-9" />
+    <edge source="Жак Энтони" target="Смоки Мо" />
+    <edge source="Жак Энтони" target="Plinofficial" />
+    <edge source="Жак Энтони" target="Bumble Beezy" />
+    <edge source="Жак Энтони" target="Apashe" />
+    <edge source="Жак Энтони" target="VITO" />
+    <edge source="Жак Энтони" target="Dj Bad Yapi" />
+    <edge source="Жак Энтони" target="Gee Baller" />
+    <edge source="Жак Энтони" target="Konfuz" />
+    <edge source="Жак Энтони" target="SLIMUS" />
+    <edge source="Жак Энтони" target="ABBBOSE" />
+    <edge source="Жак Энтони" target="NWR" />
+    <edge source="Жак Энтони" target="Чаян Фамали" />
+    <edge source="Жак Энтони" target="Эсчевский" />
+    <edge source="Жак Энтони" target="Gangsburg" />
+    <edge source="Жак Энтони" target="KERTIEV" />
+    <edge source="Жак Энтони" target="Николай Римский-Корсаков" />
+    <edge source="Жак Энтони" target="Murovei" />
+    <edge source="Жак Энтони" target="Кирилл Мойтон" />
+    <edge source="Жак Энтони" target="Птаха" />
+  </graph>
+</graphml>

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+}
+
+#graph-container {
+    width: 100%;
+    height: 80vh;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    margin: 20px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#graph-container {
+    width: 100%;
+    height: 80vh;
+    background: #000;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
