@@ -66,6 +66,57 @@ class GraphService:
             links=[self._edge_to_link(edge) for edge in edges],
         )
 
+    def featured(self, depth: int = 2, limit: int = 80, seed_count: int = 6) -> GraphResponse:
+        if depth < 1 or depth > 2:
+            raise ValueError("depth должен быть от 1 до 2")
+        if limit < 10 or limit > 150:
+            raise ValueError("limit должен быть от 10 до 150")
+
+        edges = self.graph.list_edges()
+        if not edges:
+            raise EmptyGraphError("Граф артистов пуст")
+
+        graph = self._build_networkx_graph()
+        degree_by_artist: dict[int, int] = {}
+        for edge in edges:
+            degree_by_artist[edge.source_artist_id] = degree_by_artist.get(edge.source_artist_id, 0) + edge.weight
+            degree_by_artist[edge.target_artist_id] = degree_by_artist.get(edge.target_artist_id, 0) + edge.weight
+
+        seeds = [
+            artist_id
+            for artist_id, _degree in sorted(
+                degree_by_artist.items(),
+                key=lambda item: item[1],
+                reverse=True,
+            )[:seed_count]
+        ]
+
+        node_ids: set[int] = set(seeds)
+        frontier = set(seeds)
+        for _ in range(depth):
+            next_frontier: set[int] = set()
+            for artist_id in frontier:
+                next_frontier.update(graph.neighbors(artist_id))
+            for artist_id in sorted(
+                next_frontier - node_ids,
+                key=lambda item: degree_by_artist.get(item, 0),
+                reverse=True,
+            ):
+                if len(node_ids) >= limit:
+                    break
+                node_ids.add(artist_id)
+            frontier = next_frontier & node_ids
+            if len(node_ids) >= limit:
+                break
+
+        artists = self._get_artists_by_ids(node_ids)
+        edges = self.graph.get_edges_for_artists(node_ids)
+
+        return GraphResponse(
+            nodes=[GraphNode(id=item.id, label=item.name) for item in artists],
+            links=[self._edge_to_link(edge) for edge in edges],
+        )
+
     def _build_networkx_graph(self) -> nx.Graph:
         graph = nx.Graph()
         for artist in self.graph.list_artists():

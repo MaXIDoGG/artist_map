@@ -18,10 +18,11 @@ def seed_graphml(db: Session, graphml_path: Path, clear: bool = False) -> dict[s
     }
 
     edge_count = 0
-    for source, target in graph.edges:
+    for source, target, edge_data in graph.edges(data=True):
         source_artist = artists_by_name[str(source)]
         target_artist = artists_by_name[str(target)]
-        if storage.upsert_edge(source_artist, target_artist) is not None:
+        track_title = edge_data.get("track") or edge_data.get("title") or edge_data.get("track_title")
+        if storage.upsert_edge(source_artist, target_artist, track_title=track_title) is not None:
             edge_count += 1
 
     db.commit()

@@ -45,6 +45,17 @@ def test_shortest_path(client: TestClient, db_session: Session) -> None:
     assert [artist["name"] for artist in body["path"]] == ["First Artist", "Middle Artist", "Last Artist"]
 
 
+def test_featured_graph(client: TestClient, db_session: Session) -> None:
+    seed_sample_graph(db_session)
+
+    response = client.get("/api/v1/graph/featured", params={"depth": 2, "limit": 10, "seed_count": 1})
+
+    assert response.status_code == 200
+    body = response.json()
+    assert len(body["nodes"]) == 3
+    assert len(body["links"]) == 2
+
+
 def test_missing_artist_returns_404(client: TestClient) -> None:
     response = client.get("/api/v1/graph/path", params={"source_id": 1, "target_id": 2})
 

@@ -38,3 +38,18 @@ def get_subgraph(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
     except ValueError as exc:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)) from exc
+
+
+@router.get("/featured", response_model=GraphResponse)
+def get_featured_graph(
+    depth: Annotated[int, Query(ge=1, le=2)] = 2,
+    limit: Annotated[int, Query(ge=10, le=150)] = 80,
+    seed_count: Annotated[int, Query(ge=1, le=12)] = 6,
+    db: Session = Depends(get_db),
+) -> GraphResponse:
+    try:
+        return GraphService(db).featured(depth=depth, limit=limit, seed_count=seed_count)
+    except EmptyGraphError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)) from exc

@@ -66,6 +66,7 @@ h1 {
 
 .search-panel,
 .result-card,
+.edge-card,
 .graph-panel,
 .alert {
   margin-top: 24px;
@@ -159,13 +160,47 @@ h1 {
 
 .result-card {
   display: grid;
+  gap: 12px;
+  padding: 18px 20px;
+}
+
+.result-card span,
+.edge-card span {
+  color: #84f1c2;
+  font-weight: 800;
+}
+
+.fit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.fit-card {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 12px 14px;
+  color: #f5f7fb;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.fit-card strong {
+  color: #c6cfdd;
+  font-size: 0.9rem;
+}
+
+.edge-card {
+  display: grid;
   gap: 8px;
   padding: 18px 20px;
 }
 
-.result-card span {
-  color: #84f1c2;
-  font-weight: 800;
+.edge-card p {
+  margin: 0;
+  color: #c6cfdd;
 }
 
 .graph-panel {
@@ -192,6 +227,11 @@ h1 {
 
 .link-highlighted {
   stroke: #ff6b6b;
+}
+
+.link-selected {
+  stroke: #84f1c2;
+  stroke-width: 6;
 }
 
 .node {

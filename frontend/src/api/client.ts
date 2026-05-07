@@ -32,3 +32,12 @@ export function getSubgraph(artistId: number, depth = 1): Promise<GraphResponse>
   });
   return request<GraphResponse>(`/graph/subgraph?${params.toString()}`);
 }
+
+export function getFeaturedGraph(): Promise<GraphResponse> {
+  const params = new URLSearchParams({
+    depth: "2",
+    limit: "80",
+    seed_count: "6",
+  });
+  return request<GraphResponse>(`/graph/featured?${params.toString()}`);
+}

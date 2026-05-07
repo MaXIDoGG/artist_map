@@ -10,8 +10,8 @@ export type GraphNode = {
 };
 
 export type GraphLink = {
-  source: number;
-  target: number;
+  source: number | GraphNode;
+  target: number | GraphNode;
   weight: number;
   track_examples: string[];
 };

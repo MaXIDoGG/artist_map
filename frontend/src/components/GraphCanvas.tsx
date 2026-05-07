@@ -6,6 +6,8 @@ import type { GraphResponse } from "../types/api";
 type GraphCanvasProps = {
   graph: GraphResponse | null;
   pathIds?: number[];
+  selectedLinkKey?: string | null;
+  onLinkSelect?: (link: D3Link) => void;
 };
 
 type D3Node = d3.SimulationNodeDatum & {
@@ -24,7 +26,9 @@ function linkKey(source: number, target: number) {
   return [source, target].sort((a, b) => a - b).join(":");
 }
 
-export function GraphCanvas({ graph, pathIds = [] }: GraphCanvasProps) {
+export { linkKey };
+
+export function GraphCanvas({ graph, pathIds = [], selectedLinkKey, onLinkSelect }: GraphCanvasProps) {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   const highlightedLinks = useMemo(() => {
@@ -70,9 +74,24 @@ export function GraphCanvas({ graph, pathIds = [] }: GraphCanvasProps) {
       .attr("class", (link) => {
         const source = typeof link.source === "number" ? link.source : link.source.id;
         const target = typeof link.target === "number" ? link.target : link.target.id;
-        return highlightedLinks.has(linkKey(source, target)) ? "link link-highlighted" : "link";
+        const key = linkKey(source, target);
+        const classes = ["link"];
+        if (highlightedLinks.has(key)) {
+          classes.push("link-highlighted");
+        }
+        if (selectedLinkKey === key) {
+          classes.push("link-selected");
+        }
+        return classes.join(" ");
       })
-      .attr("stroke-width", (link) => Math.max(1, Math.min(5, link.weight)));
+      .attr("stroke-width", (link) => Math.max(1, Math.min(5, link.weight)))
+      .style("cursor", "pointer")
+      .on("click", (_event, link) => onLinkSelect?.(link));
+
+    linkSelection.append("title").text((link) => {
+      const tracks = link.track_examples.length > 0 ? link.track_examples.join(", ") : "Треки не указаны в текущих данных";
+      return `Фитов: ${link.weight}. ${tracks}`;
+    });
 
     const nodeSelection = viewport
       .append("g")
@@ -135,7 +154,7 @@ export function GraphCanvas({ graph, pathIds = [] }: GraphCanvasProps) {
     return () => {
       simulation.stop();
     };
-  }, [graph, highlightedLinks, pathIds]);
+  }, [graph, highlightedLinks, onLinkSelect, pathIds, selectedLinkKey]);
 
   if (!graph) {
     return <div className="empty-graph">Выберите артистов, чтобы увидеть путь.</div>;
