@@ -1,17 +1,26 @@
 from collections import deque
 
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from backend.core.config import get_settings
+from backend.models import ArtistEdge
 from graph_builder.graph_storage import GraphStorage
 from graph_builder.ym_client import YMClient
 
 
-def import_from_yandex_music(db: Session, start_artist_name: str, max_depth: int | None = None) -> dict[str, int]:
+def import_from_yandex_music(
+    db: Session,
+    start_artist_name: str,
+    max_depth: int | None = None,
+    clear: bool = False,
+) -> dict[str, int]:
     settings = get_settings()
     max_depth = settings.import_max_depth if max_depth is None else max_depth
     client = YMClient()
     storage = GraphStorage(db)
+    if clear:
+        storage.clear()
 
     start = client.search_artist(start_artist_name)
     if start is None:
@@ -60,4 +69,5 @@ def import_from_yandex_music(db: Session, start_artist_name: str, max_depth: int
             imported_tracks += 1
 
     db.commit()
-    return {"artists": len(visited), "tracks": imported_tracks, "edges": 0}
+    edge_count = db.scalar(select(func.count()).select_from(ArtistEdge)) or 0
+    return {"artists": len(visited), "tracks": imported_tracks, "edges": edge_count}
