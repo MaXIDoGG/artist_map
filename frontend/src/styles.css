@@ -1,0 +1,220 @@
+:root {
+  color: #f5f7fb;
+  background: #080b12;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  color: #08111f;
+  background: #84f1c2;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.app-shell {
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #84f1c2;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.subtitle {
+  color: #a7b0c0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.search-panel,
+.result-card,
+.graph-panel,
+.alert {
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.search-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  gap: 18px;
+  align-items: end;
+  padding: 20px;
+}
+
+.artist-search {
+  position: relative;
+  display: grid;
+  gap: 8px;
+}
+
+.artist-search label {
+  color: #c6cfdd;
+  font-weight: 700;
+}
+
+.artist-search input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 0.95rem 1rem;
+  color: #f5f7fb;
+  background: rgba(1, 5, 12, 0.86);
+  outline: none;
+}
+
+.artist-search input:focus {
+  border-color: #84f1c2;
+}
+
+.hint {
+  color: #a7b0c0;
+  font-size: 0.85rem;
+}
+
+.options {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 8px;
+  background: #101827;
+}
+
+.options button {
+  justify-content: flex-start;
+  border-radius: 12px;
+  color: #f5f7fb;
+  background: transparent;
+  text-align: left;
+  font-weight: 600;
+}
+
+.options button:hover {
+  background: rgba(132, 241, 194, 0.12);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.secondary {
+  color: #f5f7fb;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.alert {
+  padding: 16px 20px;
+  color: #ffd7d7;
+  background: rgba(255, 71, 87, 0.12);
+}
+
+.result-card {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+}
+
+.result-card span {
+  color: #84f1c2;
+  font-weight: 800;
+}
+
+.graph-panel {
+  height: min(64vh, 680px);
+  min-height: 460px;
+  overflow: hidden;
+}
+
+.graph-canvas,
+.empty-graph {
+  width: 100%;
+  height: 100%;
+}
+
+.empty-graph {
+  display: grid;
+  place-items: center;
+  color: #a7b0c0;
+}
+
+.link {
+  stroke: rgba(139, 151, 172, 0.42);
+}
+
+.link-highlighted {
+  stroke: #ff6b6b;
+}
+
+.node {
+  fill: #7f8da6;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 1.5;
+}
+
+.node-highlighted {
+  fill: #84f1c2;
+}
+
+.node-label {
+  fill: #f5f7fb;
+  font-size: 12px;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: rgba(8, 11, 18, 0.9);
+  stroke-width: 4px;
+}
+
+@media (max-width: 860px) {
+  .search-panel {
+    grid-template-columns: 1fr;
+  }
+}

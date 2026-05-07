@@ -1,24 +1,24 @@
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
-from fastapi import Request
-from fastapi.templating import Jinja2Templates
-from backend.services.graph_service import GraphService
+from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
-graph_service = GraphService()
+from backend.api.routes import api_router
+from backend.core.config import get_settings
 
-app.mount("/static", StaticFiles(directory="frontend"), name="static")
-templates = Jinja2Templates(directory="frontend")
 
-@app.get("/")
-def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+def create_app() -> FastAPI:
+    settings = get_settings()
+    app = FastAPI(title=settings.app_name)
 
-@app.get("/path")
-def get_path(a1: str, a2: str):
-    return graph_service.shortest_path(a1, a2)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=settings.cors_origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+    app.include_router(api_router, prefix=settings.api_v1_prefix)
 
-@app.get("/graph")
-def get_full_graph():
-    return graph_service.get_full_graph()
+    return app
+
+
+app = create_app()

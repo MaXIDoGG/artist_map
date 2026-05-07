@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: artist-map-postgres
+    environment:
+      POSTGRES_DB: artist_map
+      POSTGRES_USER: artist_map
+      POSTGRES_PASSWORD: artist_map
+    ports:
+      - "5433:5432"
+    volumes:
+      - artist_map_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U artist_map -d artist_map"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  artist_map_postgres:

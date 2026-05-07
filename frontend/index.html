@@ -1,29 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="ru">
+  <head>
     <meta charset="UTF-8">
-    <title>Russian Artist Map</title>
-
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    
-
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-
-<body>
-
-<h1>Russian Artist Map</h1>
-
-<div class="controls">
-    <input type="text" id="artist1" placeholder="Артист 1">
-    <input type="text" id="artist2" placeholder="Артист 2">
-    <button onclick="findPath()">Найти путь</button>
-</div>
-
-<div id="info"></div>
-
-<div id="graph-container"></div>
-
-<script src="/static/graph.js"></script>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Map</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
