@@ -1,0 +1,16 @@
+.git
+.github
+.env
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+htmlcov
+frontend/node_modules
+frontend/dist
+data
+*.sql
+*.dump
+terminals
+agent-transcripts
