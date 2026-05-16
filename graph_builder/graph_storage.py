@@ -67,10 +67,11 @@ class GraphStorage:
         return edge
 
     def save_collaboration_track(self, title: str, artists: list[Artist], ym_id: str | None = None) -> Track:
+        unique_artists = list({artist.id: artist for artist in artists}.values())
         track = self.upsert_track(title=title, ym_id=ym_id)
-        for artist in artists:
+        for artist in unique_artists:
             self.attach_artist_to_track(artist, track)
-        for artist_a, artist_b in combinations(artists, 2):
+        for artist_a, artist_b in combinations(unique_artists, 2):
             self.upsert_edge(artist_a, artist_b, track_title=title)
         self.db.flush()
         return track

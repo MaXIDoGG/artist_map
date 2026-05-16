@@ -19,4 +19,15 @@ class YMClient:
             return None
 
     def get_artist_tracks(self, artist):
-        return artist.getTracks(page_size=100).tracks
+        page_size = get_settings().import_track_page_size
+        page = 0
+        tracks = []
+        while True:
+            batch = artist.getTracks(page=page, page_size=page_size)
+            if batch is None or not batch.tracks:
+                break
+            tracks.extend(batch.tracks)
+            if len(batch.tracks) < page_size:
+                break
+            page += 1
+        return tracks

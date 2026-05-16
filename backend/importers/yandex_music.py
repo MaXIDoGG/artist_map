@@ -1,4 +1,5 @@
 from collections import deque
+from collections.abc import Sequence
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -11,31 +12,58 @@ from graph_builder.ym_client import YMClient
 
 def import_from_yandex_music(
     db: Session,
-    start_artist_name: str,
+    start_artist_name: str | Sequence[str],
     max_depth: int | None = None,
     clear: bool = False,
 ) -> dict[str, int]:
     settings = get_settings()
     max_depth = settings.import_max_depth if max_depth is None else max_depth
+    seed_names = [start_artist_name] if isinstance(start_artist_name, str) else list(start_artist_name)
     client = YMClient()
     storage = GraphStorage(db)
     if clear:
         storage.clear()
 
-    start = client.search_artist(start_artist_name)
-    if start is None:
-        return {"artists": 0, "tracks": 0, "edges": 0}
-
+    queue: deque[tuple[object, int]] = deque()
     visited: set[str] = set()
-    queue = deque([(start, 0)])
+    queued_depth: dict[str, int] = {}
     imported_tracks = 0
+    processed = 0
+
+    def enqueue(artist: object, depth: int) -> None:
+        if depth > max_depth:
+            return
+        artist_key = str(getattr(artist, "id", artist.name))
+        if artist_key in visited:
+            return
+        if artist_key in queued_depth and queued_depth[artist_key] <= depth:
+            return
+        queued_depth[artist_key] = depth
+        queue.append((artist, depth))
+
+    for name in seed_names:
+        start = client.search_artist(name)
+        if start is not None:
+            enqueue(start, 0)
+
+    if not queue:
+        return {"artists": 0, "tracks": 0, "edges": 0}
 
     while queue:
         artist, depth = queue.popleft()
         artist_id = str(getattr(artist, "id", artist.name))
         if artist_id in visited or depth > max_depth:
             continue
+        if depth > queued_depth.get(artist_id, depth):
+            continue
         visited.add(artist_id)
+        processed += 1
+        if processed % 50 == 0:
+            print(
+                f"Processed {processed} artists, queue {len(queue)}, visited {len(visited)}",
+                flush=True,
+            )
+            db.commit()
 
         current_artist = storage.upsert_artist(
             name=artist.name,
@@ -46,24 +74,21 @@ def import_from_yandex_music(
             continue
 
         for track in client.get_artist_tracks(artist):
-            track_artists = []
+            track_artists: dict[int, object] = {}
             for track_artist in track.artists:
                 saved_artist = storage.upsert_artist(
                     name=track_artist.name,
                     ym_id=str(getattr(track_artist, "id", "")) or None,
                     meta={"source": "yandex_music"},
                 )
-                track_artists.append(saved_artist)
-                next_artist_id = str(getattr(track_artist, "id", track_artist.name))
-                if next_artist_id not in visited:
-                    queue.append((track_artist, depth + 1))
+                track_artists[saved_artist.id] = saved_artist
+                enqueue(track_artist, depth + 1)
 
-            if current_artist not in track_artists:
-                track_artists.append(current_artist)
+            track_artists[current_artist.id] = current_artist
 
             storage.save_collaboration_track(
                 title=track.title,
-                artists=track_artists,
+                artists=list(track_artists.values()),
                 ym_id=str(getattr(track, "id", "")) or None,
             )
             imported_tracks += 1

@@ -53,16 +53,20 @@ def seed_database_from_graphml(db: Session, graphml_path: Path, clear: bool = Fa
 
 def import_database_from_yandex(
     db: Session,
-    start_artist: str,
+    start_artists: str | list[str],
     max_depth: int = MAX_DEPTH,
     clear: bool = False,
 ) -> dict[str, int]:
-    return import_from_yandex_music(db, start_artist_name=start_artist, max_depth=max_depth, clear=clear)
+    return import_from_yandex_music(db, start_artist_name=start_artists, max_depth=max_depth, clear=clear)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build or import the artist collaboration graph.")
     parser.add_argument("--artist", default="Oxxxymiron", help="Start artist for Yandex Music import.")
+    parser.add_argument(
+        "--artists",
+        help="Comma-separated seed artists for a wider graph (overrides --artist).",
+    )
     parser.add_argument("--depth", type=int, default=MAX_DEPTH, help="Yandex Music traversal depth.")
     parser.add_argument("--graphml", type=Path, help="Seed Postgres from an existing GraphML file.")
     parser.add_argument("--clear", action="store_true", help="Clear database tables before importing.")
@@ -79,5 +83,10 @@ if __name__ == "__main__":
             if args.graphml:
                 result = seed_database_from_graphml(db, args.graphml, clear=args.clear)
             else:
-                result = import_database_from_yandex(db, args.artist, max_depth=args.depth, clear=args.clear)
+                seed_artists = (
+                    [name.strip() for name in args.artists.split(",") if name.strip()]
+                    if args.artists
+                    else args.artist
+                )
+                result = import_database_from_yandex(db, seed_artists, max_depth=args.depth, clear=args.clear)
             print("Import result:", result)
